@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  signal_service:
+    build: ./service/
+    container_name: signal_service
+    hostname: signal_service
+    tty: true
+    volumes:
+      - "./db:/var/lib/mysql"
+    ports:
+      - 8080:8080
